@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232E9ECF'/><text x='16' y='22' text-anchor='middle' font-family='Inter,sans-serif' font-weight='900' font-size='16' fill='white'>H</text></svg>">
+<title>Etablissements Heurteaux – Electricien Paris 17</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--blue:#2E9ECF;--dark:#0D2A3D;--light:#F3FBFE;--mid:#E0F3FA;--text:#1A3A4A}
+body{font-family:'Inter',sans-serif;color:var(--text);background:#fff;overflow-x:hidden}
+
+nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:var(--dark);position:sticky;top:0;z-index:100;transition:box-shadow 0.3s}
+nav.scrolled{box-shadow:0 2px 20px rgba(46,158,207,0.2)}
+.logo-wrap{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-svg{width:38px;height:38px}
+.logo-text{color:white}
+.logo-text .name{font-size:0.95rem;font-weight:700;display:block}
+.logo-text .sub{font-size:0.7rem;opacity:0.5;letter-spacing:0.08em;text-transform:uppercase}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{text-decoration:none;color:rgba(255,255,255,0.5);font-size:0.85rem;transition:color 0.2s}
+.nav-links a:hover{color:white}
+.nav-cta{background:var(--blue);color:white !important;padding:0.5rem 1.2rem;border-radius:6px;font-weight:600 !important;transition:transform 0.2s,opacity 0.2s !important}
+.nav-cta:hover{opacity:0.9;transform:scale(1.03)}
+
+.hero{background:var(--dark);color:white;padding:5rem 2rem;position:relative;overflow:hidden;min-height:500px;display:flex;align-items:center}
+.hero::before{content:'';position:absolute;right:-150px;top:-150px;width:600px;height:600px;background:radial-gradient(circle,rgba(46,158,207,0.12) 0%,transparent 70%);pointer-events:none}
+.hero::after{content:'';position:absolute;left:-100px;bottom:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(46,158,207,0.06) 0%,transparent 70%);pointer-events:none}
+.hero-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(46,158,207,0.15);border:1px solid rgba(46,158,207,0.35);padding:0.4rem 1rem;border-radius:20px;font-size:0.75rem;font-weight:600;color:#7DD3F0;margin-bottom:1.5rem;letter-spacing:0.05em;text-transform:uppercase;animation:fadeDown 0.6s ease both}
+.hero h1{font-size:2.8rem;font-weight:900;line-height:1.1;margin-bottom:1rem;animation:fadeUp 0.7s 0.1s ease both}
+.hero h1 span{color:var(--blue)}
+.hero p{font-size:0.95rem;opacity:0.65;line-height:1.8;margin-bottom:2rem;animation:fadeUp 0.7s 0.2s ease both}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeUp 0.7s 0.3s ease both}
+.btn-blue{background:var(--blue);color:white;padding:0.9rem 1.8rem;border-radius:7px;font-weight:700;text-decoration:none;font-size:0.95rem;display:inline-block;transition:transform 0.2s,box-shadow 0.2s}
+.btn-blue:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(46,158,207,0.4)}
+.btn-outline{border:1px solid rgba(255,255,255,0.25);color:white;padding:0.9rem 1.8rem;border-radius:7px;font-weight:500;text-decoration:none;font-size:0.95rem;display:inline-block;transition:all 0.2s}
+.btn-outline:hover{border-color:rgba(255,255,255,0.6);background:rgba(255,255,255,0.05)}
+.hero-right{display:flex;flex-direction:column;gap:10px;animation:fadeIn 0.8s 0.4s ease both}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat-box{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:1rem;text-align:center;transition:border-color 0.2s}
+.stat-box:hover{border-color:rgba(46,158,207,0.4)}
+.stat-num{font-size:1.5rem;font-weight:900;color:var(--blue)}
+.stat-label{font-size:0.72rem;opacity:0.5;margin-top:3px}
+.cert-strip{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:1rem 1.2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.cert-strip span{font-size:0.72rem;opacity:0.45;text-transform:uppercase;letter-spacing:0.06em}
+.cert-badge{background:rgba(46,158,207,0.12);border:1px solid rgba(46,158,207,0.2);border-radius:6px;padding:0.3rem 0.7rem;font-size:0.72rem;font-weight:600;color:#7DD3F0;white-space:nowrap}
+
+.urgence{background:var(--blue);padding:0.9rem 2rem;display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap}
+.urgence p{color:white;font-weight:700;font-size:0.9rem}
+.urgence a{background:white;color:var(--blue);padding:0.55rem 1.3rem;border-radius:6px;font-weight:700;text-decoration:none;font-size:0.85rem;white-space:nowrap;transition:transform 0.2s}
+.urgence a:hover{transform:scale(1.04)}
+
+.section{padding:4rem 2rem;max-width:1000px;margin:0 auto}
+.eyebrow{text-align:center;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--blue);font-weight:600;margin-bottom:0.5rem}
+.section-title{font-size:1.9rem;font-weight:800;margin-bottom:0.4rem;text-align:center;color:var(--dark)}
+.section-sub{color:#4A7A8A;text-align:center;margin-bottom:0;font-size:0.92rem}
+.blue-line{width:36px;height:2px;background:var(--blue);margin:0.8rem auto 2.5rem;border-radius:2px}
+
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:1rem}
+.service-card{border:1px solid #D0EAF5;border-radius:10px;padding:1.5rem;text-align:center;transition:all 0.3s;background:#fff}
+.service-card:hover{border-color:var(--blue);transform:translateY(-4px);box-shadow:0 12px 30px rgba(46,158,207,0.1)}
+.service-icon{font-size:2rem;margin-bottom:0.8rem;display:block;transition:transform 0.3s}
+.service-card:hover .service-icon{transform:scale(1.15)}
+.service-card h3{font-size:0.9rem;font-weight:700;margin-bottom:0.4rem;color:var(--dark)}
+.service-card p{font-size:0.78rem;color:#4A7A8A;line-height:1.55}
+
+.light-section{background:var(--light);padding:4rem 2rem}
+.light-inner{max-width:1000px;margin:0 auto}
+.points-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:2rem}
+.point{padding:1.5rem;border:1px solid #D0EAF5;border-radius:10px;background:#fff;transition:all 0.3s}
+.point:hover{border-color:var(--blue);box-shadow:0 8px 20px rgba(46,158,207,0.08)}
+.point-icon{font-size:1.5rem;margin-bottom:0.8rem;display:block}
+.point h4{color:var(--dark);font-weight:700;font-size:0.92rem;margin-bottom:0.4rem}
+.point p{color:#4A7A8A;font-size:0.8rem;line-height:1.6}
+
+/* CERTIFICATIONS SUBTILES */
+.certs-section{padding:2.5rem 2rem;background:#fff;border-top:1px solid #EAF4FA;border-bottom:1px solid #EAF4FA}
+.certs-inner{max-width:800px;margin:0 auto}
+.certs-label{text-align:center;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.12em;color:#8AACB8;font-weight:600;margin-bottom:1.5rem}
+.certs-row{display:flex;justify-content:center;align-items:center;gap:2rem;flex-wrap:wrap}
+.cert-item{display:flex;align-items:center;gap:0.7rem;background:var(--light);border:1px solid #D0EAF5;border-radius:8px;padding:0.7rem 1.2rem;transition:all 0.2s}
+.cert-item:hover{border-color:var(--blue);background:var(--mid)}
+.cert-img{width:28px;height:28px;object-fit:contain;border-radius:4px}
+.cert-name{font-size:0.78rem;font-weight:600;color:var(--dark)}
+.cert-desc{font-size:0.68rem;color:#4A7A8A;margin-top:1px}
+
+.avis-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
+.avis-card{border:1px solid #D0EAF5;border-radius:10px;padding:1.5rem;transition:all 0.3s;background:#fff}
+.avis-card:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(46,158,207,0.1);border-color:var(--blue)}
+.stars{color:#F59E0B;margin-bottom:0.8rem;font-size:1rem;letter-spacing:2px}
+.avis-card blockquote{font-size:0.85rem;color:#3A5A6A;line-height:1.75;margin-bottom:1rem;font-style:italic}
+.avis-author{font-weight:700;font-size:0.8rem;color:var(--dark)}
+
+.horaires{background:var(--dark);padding:4rem 2rem}
+.horaires-inner{max-width:700px;margin:0 auto;text-align:center}
+.horaires .section-title{color:white}
+.horaires .section-sub{color:rgba(255,255,255,0.4)}
+.horaires-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:0.8rem;margin-top:2rem}
+.jour{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:0.9rem;transition:border-color 0.2s}
+.jour:hover{border-color:rgba(46,158,207,0.5)}
+.jour-nom{font-size:0.72rem;font-weight:600;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.4rem}
+.jour-heure{font-size:0.8rem;color:white;line-height:1.5}
+.ferme{color:rgba(255,255,255,0.2) !important}
+
+.contact{background:var(--blue);padding:4rem 2rem;text-align:center}
+.contact h2{color:white;font-size:2rem;font-weight:800;margin-bottom:0.8rem}
+.contact p{color:rgba(255,255,255,0.75);margin-bottom:2rem}
+.btn-white{background:white;color:var(--blue);padding:0.9rem 1.8rem;border-radius:7px;font-weight:700;text-decoration:none;font-size:0.95rem;display:inline-block;transition:transform 0.2s,box-shadow 0.2s}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.15)}
+.btn-outline-white{border:2px solid rgba(255,255,255,0.4);color:white;padding:0.9rem 1.8rem;border-radius:7px;font-weight:500;text-decoration:none;font-size:0.95rem;display:inline-block;transition:all 0.2s}
+.btn-outline-white:hover{border-color:white;background:rgba(255,255,255,0.1)}
+.contact-grid{display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;margin-top:2.5rem}
+.contact-item .clabel{font-size:0.7rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.3rem}
+.contact-item .cvalue{color:white;font-weight:700;font-size:0.95rem}
+
+footer{background:#071820;color:rgba(255,255,255,0.25);text-align:center;padding:1.2rem;font-size:0.78rem}
+footer span{color:var(--blue)}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@media(max-width:650px){.hero-inner{grid-template-columns:1fr}.hero h1{font-size:2rem}.nav-links{display:none}}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a class="logo-wrap" href="#">
+    <svg class="logo-svg" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="38" height="38" rx="9" fill="#2E9ECF"/>
+      <text x="19" y="26" text-anchor="middle" font-family="Inter,sans-serif" font-weight="900" font-size="18" fill="white">H</text>
+    </svg>
+    <div class="logo-text">
+      <span class="name">Ets Heurteaux</span>
+      <span class="sub">Électricien certifié</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#avis">Avis</a></li>
+    <li><a href="#horaires">Horaires</a></li>
+    <li><a href="tel:0660647820" class="nav-cta">Appeler</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">⚡ Électricien certifié – Paris 17ème</div>
+      <h1>L'électricien <span>de confiance</span> à Paris</h1>
+      <p>Dépannage, rénovation électrique, installation de bornes de recharge — des interventions soignées par un artisan certifié Qualifelec.</p>
+      <div class="hero-btns">
+        <a href="tel:0660647820" class="btn-blue">📞 06 60 64 78 20</a>
+        <a href="#services" class="btn-outline">Nos services</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="stat-grid">
+        <div class="stat-box"><div class="stat-num">4.7★</div><div class="stat-label">Note moyenne</div></div>
+        <div class="stat-box"><div class="stat-num">118</div><div class="stat-label">Avis clients</div></div>
+        <div class="stat-box"><div class="stat-num">7j/7</div><div class="stat-label">Dépannage</div></div>
+        <div class="stat-box"><div class="stat-num">Paris</div><div class="stat-label">& région</div></div>
+      </div>
+      <div class="cert-strip">
+        <span>Certifié</span>
+        <div class="cert-badge">Artisan</div>
+        <div class="cert-badge">Qualifelec</div>
+        <div class="cert-badge">IRVE</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="urgence">
+  <p>⚡ Panne électrique ? Dépannage disponible 7j/7 sur Paris et région</p>
+  <a href="tel:0660647820">Appeler maintenant</a>
+</div>
+
+<div class="section reveal" id="services">
+  <div class="eyebrow">Ce qu'on fait</div>
+  <h2 class="section-title">Nos services</h2>
+  <p class="section-sub">Dépannage, rénovation, bornes de recharge — tout ce dont vous avez besoin</p>
+  <div class="blue-line"></div>
+  <div class="services-grid">
+    <div class="service-card"><span class="service-icon">🔌</span><h3>Dépannage électrique</h3><p>Panne, court-circuit, disjoncteur — intervention rapide 7j/7</p></div>
+    <div class="service-card"><span class="service-icon">🏠</span><h3>Rénovation électrique</h3><p>Mise aux normes, remplacement tableau, rénovation complète</p></div>
+    <div class="service-card"><span class="service-icon">🚗</span><h3>Borne de recharge</h3><p>Installation et dépannage bornes IRVE pour véhicules électriques</p></div>
+    <div class="service-card"><span class="service-icon">🔧</span><h3>Tableau électrique</h3><p>Diagnostic, rénovation et remplacement de tableau électrique</p></div>
+    <div class="service-card"><span class="service-icon">🔔</span><h3>Interphone</h3><p>Dépannage et installation d'interphone et systèmes connectés</p></div>
+    <div class="service-card"><span class="service-icon">✅</span><h3>Bilan électrique</h3><p>Vérification et mise en sécurité de votre installation</p></div>
+  </div>
+</div>
+
+<div class="certs-section reveal">
+  <div class="certs-inner">
+    <div class="certs-label">Certifications & qualifications</div>
+    <div class="certs-row">
+      <div class="cert-item">
+        <img class="cert-img" src="artisan.png" alt="Artisan" onerror="this.style.display='none'"/>
+        <div><div class="cert-name">Artisan certifié</div><div class="cert-desc">Immatriculé au répertoire des métiers</div></div>
+      </div>
+      <div class="cert-item">
+        <img class="cert-img" src="qualifelec.png" alt="Qualifelec" onerror="this.style.display='none'"/>
+        <div><div class="cert-name">Qualifelec</div><div class="cert-desc">Signe de qualité des installateurs électriques</div></div>
+      </div>
+      <div class="cert-item">
+        <img class="cert-img" src="qualifelecirve.png" alt="Qualifelec IRVE" onerror="this.style.display='none'"/>
+        <div><div class="cert-name">Qualifelec IRVE</div><div class="cert-desc">Compétence bornes de recharge électrique</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="light-section">
+  <div class="light-inner reveal">
+    <div class="eyebrow">Nos engagements</div>
+    <h2 class="section-title">Pourquoi nous choisir ?</h2>
+    <p class="section-sub">Un électricien ponctuel, sérieux et transparent sur les prix</p>
+    <div class="blue-line"></div>
+    <div class="points-grid">
+      <div class="point"><span class="point-icon">⏰</span><h4>Ponctualité</h4><p>On arrive à l'heure, on respecte vos créneaux sans vous faire attendre</p></div>
+      <div class="point"><span class="point-icon">💰</span><h4>Prix raisonnables</h4><p>Tarifs transparents et compétitifs, toujours annoncés avant l'intervention</p></div>
+      <div class="point"><span class="point-icon">⚡</span><h4>Intervention rapide</h4><p>Dépannage 7j/7, on résout votre problème rapidement et efficacement</p></div>
+      <div class="point"><span class="point-icon">🏆</span><h4>Travail soigné</h4><p>Finitions impeccables, timing respecté et résultat garanti à chaque fois</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="section reveal" id="avis">
+  <div class="eyebrow">Témoignages</div>
+  <h2 class="section-title">Ce que disent nos clients</h2>
+  <p class="section-sub">4.7 étoiles — 118 avis Google</p>
+  <div class="blue-line"></div>
+  <div class="avis-grid">
+    <div class="avis-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"L'électricien arrive à l'heure, ponctuel et bienveillant. Il a rapidement résolu le problème. Rien à redire, je recommande vivement cette société."</blockquote>
+      <div class="avis-author">— Pierre C.</div>
+    </div>
+    <div class="avis-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"Intervention rapide, prix raisonnable. Je recommande."</blockquote>
+      <div class="avis-author">— Iron C.</div>
+    </div>
+    <div class="avis-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"Travail soigné, timing respecté, prix très raisonnable. Je recommande."</blockquote>
+      <div class="avis-author">— Abdalah F.</div>
+    </div>
+    <div class="avis-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"Nikel, bon travail, des personnes super cool et respectueuses qui font un travail en or. Je recommande fortement."</blockquote>
+      <div class="avis-author">— Walid B.</div>
+    </div>
+  </div>
+</div>
+
+<div class="horaires reveal" id="horaires">
+  <div class="horaires-inner">
+    <div class="eyebrow" style="color:rgba(46,158,207,0.6)">Quand nous trouver</div>
+    <h2 class="section-title">Horaires</h2>
+    <p class="section-sub">100 Rue Truffaut, 75017 Paris</p>
+    <div class="blue-line"></div>
+    <div class="horaires-grid">
+      <div class="jour"><div class="jour-nom">Lun</div><div class="jour-heure">08h30–17h</div></div>
+      <div class="jour"><div class="jour-nom">Mar</div><div class="jour-heure">08h30–17h</div></div>
+      <div class="jour"><div class="jour-nom">Mer</div><div class="jour-heure">08h30–17h</div></div>
+      <div class="jour"><div class="jour-nom">Jeu</div><div class="jour-heure">08h30–17h</div></div>
+      <div class="jour"><div class="jour-nom">Ven</div><div class="jour-heure">08h30–17h</div></div>
+      <div class="jour"><div class="jour-nom">Sam</div><div class="jour-heure ferme">Fermé</div></div>
+      <div class="jour"><div class="jour-nom">Dim</div><div class="jour-heure ferme">Fermé</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="contact reveal" id="contact">
+  <h2>Besoin d'un électricien ?</h2>
+  <p>Contactez-nous pour un devis gratuit ou une intervention rapide</p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+    <a href="tel:0660647820" class="btn-white">📞 06 60 64 78 20</a>
+    <a href="#" class="btn-outline-white">✉️ Nous écrire</a>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-item"><div class="clabel">Adresse</div><div class="cvalue">100 Rue Truffaut, 75017 Paris</div></div>
+    <div class="contact-item"><div class="clabel">Téléphone</div><div class="cvalue">06 60 64 78 20</div></div>
+    <div class="contact-item"><div class="clabel">Dépannage</div><div class="cvalue">7j/7</div></div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2024 <span>Etablissements Heurteaux</span> — 100 Rue Truffaut, 75017 Paris</p>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>30);
+});
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*100)}});
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
